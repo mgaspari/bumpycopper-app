@@ -1,11 +1,15 @@
 import React from "react"
 
-function Menu(){
+function Menu(props){
   return(
-    <div className="ui inverted vertical menu">
-      <a className="active item">Home</a>
-      <a className="item">Messages</a>
-      <a className="item">Friends</a>
+    <div class="row">
+      <div class="column">
+        <div class="ui inverted menu">
+          <a class="active item" onClick={props.setDefault}>Home</a>
+          <a class="item" onClick={props.setDefault}>Messages</a>
+          <a class="item" onClick={props.setDefault}>Friends</a>
+        </div>
+      </div>
     </div>
   )
 }

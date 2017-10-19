@@ -4,6 +4,7 @@ function Slide(props){
   let handleClick = (event) => {
 
     props.selectHandle(event.target.innerText.split(' '))
+    props.setFormFalse()
   }
   return(
     <div className="ui pointing secondary vertical menu">

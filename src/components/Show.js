@@ -11,7 +11,10 @@ function Show(props){
   </div>
   <div className="extra content">
     <a>
-<i aria-hidden="true" className="user icon"></i>Number: {props.selectedPerson.phone}</a>
+<i aria-hidden="true" className="user icon"></i>Number: {props.selectedPerson.phone}</a> <br/>
+
+        <button class="ui black basic button" role="button" onClick={props.formHandler}>Edit</button>
+
   </div>
 </div>
 )

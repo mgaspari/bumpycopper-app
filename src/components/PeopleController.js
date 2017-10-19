@@ -3,25 +3,25 @@ import Show from "./Show"
 import PersonForm from "./PersonForm"
 
 export default class PeopleController extends React.Component{
-  state = {
-    showForm: false
-  }
+
+
   render(){
     let retVal = () => {
+
       if(this.props.selectedPerson){
-        if(this.state.showForm === false){
-          return <Show selectedPerson={this.props.selectedPerson} />
+
+        if(this.props.showForm === false){
+          return <Show selectedPerson={this.props.selectedPerson} formHandler={this.props.formHandler}  />
         }else{
-        return  <PersonForm selectedPerson={this.props.selectedPerson} />
+        return  <PersonForm selectedPerson={this.props.selectedPerson} formHandler={this.props.formHandler} changeName={this.props.changeName}  />
         }
       }
     }
     return(
       <div>
-        {/* {this.props.selectedPerson ? <Show selectedPerson={this.props.selectedPerson} /> : null } */}
         {retVal()}
-        {/* {this.props.selectedPerson ? this.state.showForm ? <Show selectedPerson={this.props.selectedPerson} /> : <PersonForm selectedPerson={this.props.selectedPerson} /> : null } */}
       </div>
+
     )
   }
 }
